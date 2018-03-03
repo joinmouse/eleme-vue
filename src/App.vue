@@ -20,6 +20,7 @@
 
 <script>
 import header from './components/header/header'
+import goods from './components/goods/goods'
 import axios from 'axios'
 
 const ERR_OK = 0
@@ -44,7 +45,7 @@ export default {
       })
   },
   components: {
-    'v-header': header
+    'v-header': header, goods
   }
 }
 </script>

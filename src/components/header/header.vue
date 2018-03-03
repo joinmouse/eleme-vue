@@ -26,7 +26,7 @@
       <span class="bulletin-title"></span><span class="bulletin-text">{{seller.bulletin}}</span>
       <i class="icon-keyboard_arrow_right"></i>
     </div>
-    <div class="background">  
+    <div class="background">
       <img :src="seller.avatar" width="100%" height="100%">
     </div>
     <transition name="fade">
@@ -43,7 +43,7 @@
               <div class="line"></div>
             </div>
             <ul v-if="seller.supports" class="supports">
-              <li class="support-item" v-for="(item,index) in seller.supports">
+              <li class="support-item" v-for="(item,index) in seller.supports" :key="item.id">
                 <span class="icon" :class="classMap[seller.supports[index].type]"></span>
                 <span class="text">{{seller.supports[index].description}}</span>
               </li>
@@ -67,34 +67,34 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import star from '../star/star';
+import star from '../star/star'
 
-  export default {
-    props: {
-      seller: {
-        type: Object
-      }
-    },
-    data() {
-      return {
-        detailShow: false
-      };
-    },
-    methods: {
-      showDetail() {
-        this.detailShow = true;
-      },
-      hideDetail() {
-        this.detailShow = false;
-      }
-    },
-    created() {
-      this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
-    },
-    components: {
-      star
+export default {
+  props: {
+    seller: {
+      type: Object
     }
-  };
+  },
+  data() {
+    return {
+      detailShow: false
+    }
+  },
+  methods: {
+    showDetail() {
+      this.detailShow = true
+    },
+    hideDetail() {
+      this.detailShow = false
+    }
+  },
+  created() {
+    this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
+  },
+  components: {
+    star
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
