@@ -14,7 +14,7 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view></router-view>
+    <router-view :seller="seller"></router-view>
   </div>
 </template>
 
@@ -52,7 +52,6 @@ export default {
 
 <style lang="stylus">
   #app
-    border: 1px solid red
     .tab
       display: flex
       width: 100%

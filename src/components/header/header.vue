@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="detail-close" @click="hideDetail">
-          <i class="icon-close">X</i>
+          <i class="icon-close">x</i>
         </div>
       </div>
     </transition>
