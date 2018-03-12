@@ -19,12 +19,12 @@
       </div>
       <div v-if="seller.supports" class="support-count" @click="showDetail">
         <span class="count">{{seller.supports.length}}个</span>
-        <i class="icon-keyboard_arrow_right">></i>
+        <i class="iconfont icon-arrow"></i>
       </div>
     </div>
     <div class="bulletin-wrapper" @click="showDetail">
       <span class="bulletin-title"></span><span class="bulletin-text">{{seller.bulletin}}</span>
-      <i class="icon-keyboard_arrow_right"></i>
+      <i class="iconfont icon-arrow"></i>
     </div>
     <div class="background">
       <img :src="seller.avatar" width="100%" height="100%">
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="detail-close" @click="hideDetail">
-          <i class="icon-close">x</i>
+          <i class="iconfont icon-close"></i>
         </div>
       </div>
     </transition>
@@ -98,7 +98,8 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  @import "../../common/stylus/mixin";
+  @import "../../common/stylus/mixin"
+  @import "../../common/stylus/icon"
 
   .header
     position: relative
@@ -173,7 +174,7 @@ export default {
         .count
           vertical-align: top
           font-size: 10px
-        .icon-keyboard_arrow_right
+        .icon-arrow
           margin-left: 2px
           line-height: 24px
           font-size: 10px
@@ -200,11 +201,10 @@ export default {
         vertical-align: top
         margin: 0 4px
         font-size: 10px
-      .icon-keyboard_arrow_right
+      .icon-arrow
         position: absolute
         font-size: 10px
         right: 12px
-        top: 8px
 
     .background
       position: absolute
@@ -303,4 +303,8 @@ export default {
         margin: -64px auto 0 auto
         clear: both
         font-size: 32px
+        .icon-close
+          position: absolute
+          top: -12px
+          font-size: 24px
 </style>
